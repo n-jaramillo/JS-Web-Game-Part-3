@@ -5,10 +5,17 @@ function newImage(url){
     return image
 }
 
-function move(image, left, bottom) {
+function move(image) {
     image.style.position = 'fixed'
-    image.style.left = left + 'px'
-    image.style.bottom = bottom + 'px'
+
+    function moveToCoordinates(left, bottom) {
+        image.style.left = left + 'px'
+        image.style.bottom = bottom + 'px'
+    }
+
+    return {
+        to: moveToCoordinates
+    }
 }
 
 let greenCharacter = newImage('assets/green-character.gif')
