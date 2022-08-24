@@ -18,13 +18,12 @@ function move(image) {
     }
 }
 
-let greenCharacter = newImage('assets/green-character.gif')
-move(greenCharacter, 100, 250)
-newImage('assets/tree.png', 200, 450)
-newImage('assets/pillar.png', 350, 250)
-newImage('assets/pine-tree.png', 450, 350)
-newImage('assets/crate.png', 150, 350)
-newImage('assets/well.png', 500, 575)
+let greenCharacter = move(newImage('assets/green-character.gif')).to(100, 250)
+move(newImage('assets/tree.png')).to(200, 450)
+move(newImage('assets/pillar.png')).to(350, 250)
+move(newImage('assets/pine-tree.png')).to(450, 350)
+move(newImage('assets/crate.png')).to(150, 350)
+move(newImage('assets/well.png')).to(500, 575)
 
 
 function newItem(url, left, bottom){
@@ -38,9 +37,9 @@ function newItem(url, left, bottom){
     return item
 }
 
-newItem('assets/sword.png', 500, 555)
-newItem('assets/shield.png', 165, 335)
-newItem('assets/staff.png', 600, 250)
+move(newItem('assets/sword.png')).to(500, 555)
+move(newItem('assets/shield.png')).to(165, 335)
+move(newItem('assets/staff.png')).to(600, 250)
 
 function newInventory(){
     let inventory = document.createElement('div')
